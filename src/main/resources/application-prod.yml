@@ -1,0 +1,8 @@
+server:
+  port: 8082
+  context-path: /girl
+girl:    # 利用前缀将配置分组
+  cSize: F
+  age: 18
+  content: "cSize: ${cSize}, age: ${age}}"  # 在配置中使用配置  ${  } 大概就是需要将其当做代码看待，而不是字符串
+
