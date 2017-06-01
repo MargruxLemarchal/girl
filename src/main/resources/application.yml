@@ -1,0 +1,17 @@
+# 这个项目用于学习『2小时学会SpringBoot』——http://www.imooc.com/learn/767
+# 使用 yml 文件代替原来的 properties 可以使得公共前缀只用写一次；
+# 这里字符串不用加引号；
+# 配置文件最好不要频繁改动；
+spring:
+  profiles:
+    active: dev  # 生产 和 测试环境的配置可能并不一样，所以这里为生产 写了配置文件application-prod.yml, 为测试 写了配置文件application-dev.yml。
+                 # 这里设置为 dev ，在 mvn 编译和 java -jar xxx.jar --spring.profiles.active=prod  来运行， 这样浏览器可以同时访问两种配置环境
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dbgirl
+    username: tester
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: create  # 每次程序运行的时候都会生成空表，如果已经有了，就将原来的删除（连带表中数据），如果是 update 的话就不会删除数据，validate 会验证类中属性和表中是否一致，如果不一致会报错
+    show-sql: true
