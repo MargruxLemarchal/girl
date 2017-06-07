@@ -1,1 +1,1 @@
-git test & modify test &&& modify test2
+git test & modify test & modify test2
