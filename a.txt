@@ -1,1 +1,2 @@
-git test
+git test & modify test $$$ modify test2
+merge test
